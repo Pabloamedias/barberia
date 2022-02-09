@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Barbería Alura</title>
+    <link rel="stylesheet" href="reset.css"> <!--Este archivo resetea TODAS las etiquetas de nuestra pagina, esto pq el navegador modifica valores-->
+    <link rel="stylesheet" href="style.css"><!--Como esta hoja de estilo va despues de reset, crea nuevos valores, de esta forma tenemos un control total sobre el diseño de la página-->
+</head>
+<body>
+    <header>
+        <div class="caja">
+            <h1><img src="Images/logo.png" alt="Logo barbería"></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a> </li>
+                    <li><a href="Productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a> </li>
+                </ul>
+            </nav> 
+        </div>
+         
+    </header>
+    <main>
+        <form action="">
+            <label for="nombre_apellido">Nombre y Apellido</label> <!--Label e input van siempre juntos, en este caso creamos el label como una clase, más abajo mediante un id hacemos que el input tome el label-->
+            <input type="text" id="nombre_apellido" class="input-padron" required> <!--required para campo obligatorio-->
+
+            <label for="correo">Corre electronico</label>
+            <input type="email" id="correo" class="input-padron" required placeholder="email@dominio.com">
+
+            <label for="telefono">Telefono</label>
+            <input type="tel" id="telefono" class="input-padron" required placeholder="+569 XXXXXX">
+
+            <label for="mensaje" >Mensaje</label>
+            <textarea name="mensaje" id="" cols="70" rows="10" class="input-padron" required></textarea>
+            <fieldset>
+                <legend>¿Cómo le gustaría que le contactemos?</legend>
+
+                <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label>
+                <!--name="contacto" en los input de tipo radio, puede agregar esta etiqueta para agrupar los radio, esto me permite que el usuario solo pueda seleccionar uno-->
+
+                <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Télefono</label>
+                
+
+                <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>WhatsApp</label>
+                
+            </fieldset>
+
+            <legend>¿En cual horario prefiere ser atendido?</legend>
+
+            <fieldset>
+                <select > <!--La estructura de la etiqueta <select> está compuesta de uno o más <option>.-->
+                    <option value="">Mañana</option>
+                    <option value="">Tarde</option>
+                    <option value="">Noche</option>
+                </select>
+            </fieldset>
+
+            <label class="checkbox"><input type="checkbox" checked>¿Le gustaría recibir novedades de la Barbería Alura?</label><!--En lugar de usar ID, insertamos el input dentro de la etiqueta label-->
+
+            
+
+            <input type="submit" value="Enviar formulario" class="enviar"> <!--Por defecto no es necesario agregar el value, google lo genera de forma automatica, dependiendo del idioma-->
+        </form>
+
+        <table> <!-- Las etiquetas <thead>, <tbody> y <tfoot> ayudan a dejar el contenido de la tabla más dividido y más semántico.-->
+            <thead>
+                <tr>
+                    <th>Días</th>
+                    <th>Horario</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Lunes</td>
+                    <td>08h - 20h</td>
+                </tr>
+                <tr>
+                    <td>Miercoles</td>
+                    <td>08h - 20h</td>
+                </tr>
+                <tr>
+                    <td>Viernes</td>
+                    <td>08h - 20h</td>
+                </tr>
+            </tbody>
+            
+            
+        </table>
+
+    </main>
+    <footer>
+        <img src="Images/logo-blanco.png" alt="logo barbería">
+        
+        <p class="copyright"> &copy Copyright Barbería Alura - 2020</p> <!--Usamos ese simbolo de copyright como entidad "&copy"-->
+    </footer>
+</body>
+</html>
